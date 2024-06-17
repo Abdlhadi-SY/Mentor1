@@ -1,0 +1,351 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul{
+  list-style-type: none;
+}
+body{
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+.header{
+  margin-bottom: 100px;
+}
+.header .container{
+  height:100px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+.header ul{
+  display: flex;
+}
+.header ul a{
+  text-decoration: none;
+}
+.header ul li{
+  padding: 10px;
+  font-size: 16px;
+  color: grey;
+}
+@media(max-width:767px){
+  .header .container img{
+    width: 100px;
+  }
+}
+.features{
+  margin-bottom: 100px;
+}
+.features .container{
+  display: flex;
+}
+.features .info{
+  margin: auto;
+}
+.features .info h2{
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.features .info p{
+  margin-bottom: 20px;
+  color: grey;
+}
+.features form{
+  display: flex;
+  align-items: center;
+}
+.features .info input[type="email"]{
+  padding: 8px;
+  width: 200px;
+  outline: none;
+}
+.features .info input[type="submit"]{
+  background-color:  hsl(224, 93%, 58%);
+  padding-block: 8px;
+  padding-inline: 35px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.features .image img{
+  max-width: 100%;
+}
+@media(max-width:767px){
+  .features .container{
+    flex-direction: column-reverse;
+  }
+  .features form{
+    flex-direction: column;
+  }
+  .features .info form input[type="email"],input[type="submit"]{
+    width: 100%;
+  }
+  .features .info form input[type="submit"]{
+    margin: 0;
+  }
+  .features .info input[type="email"]{
+    margin-bottom: 5px;
+  }
+  .features .info{
+    text-align: center;
+  }
+  .features .info p,h2{
+    width: 350px;
+  }
+}
+.team{
+    position: relative;
+    overflow: hidden; 
+    padding-block: 100px;
+}
+.team::before{
+  content: "";
+    position: absolute;
+    width: 137%;
+    height: 100vh;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: hsl(240, 75%, 98%);   
+    z-index: -1;
+}
+.team .container{
+  display: flex;
+  justify-content: space-between;
+}
+.team .box h2{
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.team .box p{
+  margin-bottom: 10px;
+}
+.team .box .eicon{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.team .box .eicon a{
+  margin-right: 5px;
+  color:  hsl(170, 45%, 43%);
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 5px;
+}
+.team .box .eicon a::before{
+  content: "";
+  position: absolute;
+  background-color: hsl(170, 45%, 43%) ;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1px;
+
+}
+.team .image img{
+  width: 500px;
+}
+.team .box .inde{
+  background: white;
+  width: 350px;
+  padding: 20px;
+}
+.team .box .inde img{
+  margin-bottom: 5px;
+}
+.team .box .inde p{
+  color: gray;
+  margin-bottom: 10px;
+  width: 350px;
+}
+.team .box .inde .rool{
+  display: flex; 
+  align-items: center;
+}
+.team .box .inde .rool img{
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.team .box .inde .rool .avatar{
+  font-size: 10px;
+}
+.team .box .inde .rool .avatar h2{
+  margin-bottom: 8px;
+}
+@media (max-width:767px) {
+  .team .container{
+    flex-direction: column-reverse;
+  }
+  .team .image img{
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .team .box > h2,
+  .team .box > p{
+    text-align: center;
+  }
+  .team .box p{
+    color: gray;
+  }
+  .team .box .eicon{
+    justify-content: center;
+  }
+  .team .box .inde p{
+    max-width: 100%;
+  }
+}
+.sign-in .re{
+  background-color: hsl(238, 22%, 44%);
+}
+.sign-in .container .register{
+  padding-block: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.register .info h2,
+.register .info p{
+  color: white;
+  margin-bottom: 20px;
+  width: 450px;
+}
+.register form input[type="email"]{
+  padding: 10px;
+  width: 400px;
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 5px;
+  display: block;
+  border: none;
+}
+.register form input[type="email"]::placeholder{
+  opacity: 0.3;
+}
+.register form input[type="submit"]{
+  background-color:  hsl(224, 93%, 58%);
+  padding-block: 8px;
+  padding-inline: 35px;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.sign-in .ro{
+  background-color: hsl(243, 87%, 12%);
+}
+.container .contact{
+  padding-block: 50px;
+}
+.contact .logo{
+  width: 100%;
+}
+.contact .priv{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
+  padding-top: 10px;
+}
+.priv .numbers > div{
+  display: flex;
+}
+.priv .numbers .one,
+.priv .numbers .two{
+  display: flex;
+  align-items: center;
+}
+.priv .numbers .one i,
+.priv .numbers .two i{
+  margin-right: 10px;
+}
+.priv ul li{
+  padding-bottom: 10px;
+}
+.priv ul a{
+  text-decoration: none;
+  color: white;
+}
+.priv .icons i{
+  padding-right: 5px;
+  font-size: 19px;
+}
+@media (max-width:767px) {
+  .sign-in .container .register{
+    flex-direction: column;
+    text-align: center;
+  }
+  .sign-in .container .register .info h2,
+  .sign-in .container .register .info p{
+      width: 269px;;
+  }
+  .sign-in .container .register form input[type="email"],
+  .sign-in .container .register form input[type="submit"]{
+    width: 267px;
+    text-align: center;
+  }
+  .contact .priv{
+    flex-direction: column;
+  }
+  .priv .numbers{
+    padding: 10px;
+  }
+  .priv .numbers .one{
+    margin-bottom: 5px;
+  }
+  .priv .three,
+  .priv .four{
+    padding-block: 20px;
+    padding-inline: 10px;
+  }
+  .priv .three li,
+  .priv .four li{
+    padding-block: 10px;
+  }
+  .priv .icons{
+    margin: auto
+  }
+  .priv .icons i{
+    padding-left: 10px;
+  }
+}
